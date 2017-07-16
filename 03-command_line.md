@@ -19,22 +19,35 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+* clear - clear command window
+* ls - list files
+* ls -a - list files include hidden
+* pwd - present working directory
+* cd - change directory
+* cd .. - move up one directory
+* mkdir *foldername* - create a directory
+* touch *filename* - create a file in working directory
+* cp frida.txt lincoln.txt - copies frida.txt to lincoln.txt
+* mv superman.txt superhero/ - move the superman.txt to superhero directory
+* rm waterboy.txt - remove waterboy.txt
+* rm -r comedy - will remove the comedy folder
+* grep Mount mountains.txt - searches for 'Mount' in mountains.txt
+* grep -i - makes grep search without case sensitivity
+* grep -R Arctic /home/ccuser/workspace/geography - returns all files in the dir with 'Arctic'
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
-
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`ls` list files  
+`ls -a`  list files include hidden  
+`ls -l`  list files in long name  
+`ls -lh` print file sizes in  human readable  
+`ls -lah` hidden files, long name, file size in human readable   
+`ls -t` order files and directories by the time they were last modified    
+`ls -Glp` long format, shows which are directories '/' and colored  
 
 ---
 
@@ -42,7 +55,12 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+* ls -lh
+* ls -Glp
+* ls -Glpth: show file folders, long name, human-readable, newest file first
+* ls -R : show subdirectories
+* ls -1 : each entry on a new line
 
 ---
 
@@ -50,7 +68,13 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> >
+Source: https://www.computerhope.com/unix/xargs.htm
+This reads items from the standard input, delimited by blanks or newlines, and executes the command (the default command is echo, located at /bin/echo) one or more times with any initial-arguments followed by items read from standard input. 
+
+Example from source:
+find /tmp -name core -type f -print | xargs /bin/rm -f
+Find files named *core* in or below the directory /tmp and delete them. Note that this will work incorrectly if there are any filenames containing newlines or spaces.
 
  
 
